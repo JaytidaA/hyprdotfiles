@@ -1,0 +1,10 @@
+import = ["/home/$USER/.cache/wal/colors-alacritty.toml"]
+
+[cursor]
+style = "Beam"
+
+[font]
+size = 15
+
+[font.normal]
+family = "FiraCode Nerd Font"

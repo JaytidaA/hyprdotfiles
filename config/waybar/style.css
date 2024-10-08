@@ -1,0 +1,123 @@
+@import url("/home/$USER/.cache/wal/colors-waybar.css");
+
+* {
+	border: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+window#waybar {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+
+	color: @color7;
+	background-color: @background;
+
+	font-family: "Fira Code Nerd", monospace;
+}
+
+#custom-os_button {
+	margin: 5px 15px;
+
+	color: @color13;
+
+	font-size: 30px;
+}
+
+#custom-os_button:hover {
+	color: @color14;
+
+	text-shadow: 0px 0px 0.5px @foreground
+}
+
+#taskbar button {
+	margin: 5px 7.5px;
+}
+
+#taskbar button:hover {
+	background-color: @foreground;
+}
+
+#clock, #network, #pulseaudio, #backlight, #cpu, #memory, #temperature, #battery, #tray, #custom-power {
+	border-radius: 5px;
+
+	color: @color0;
+	background-color: @color2;
+
+	font-size: 17px;
+}
+
+#clock {
+	padding: 2px 15px;
+	margin: 5px 0px;
+
+	color: @color0;
+	background-color: @color5;
+
+	font-weight: 700;
+	font-style: italic;
+}
+
+#network, #pulseaudio, #backlight, #battery, #tray, #custom-power {
+	padding: 2px 8px;
+	margin: 5px 3px;
+}
+
+#network.disconnected, #pulseaudio.muted {
+	background-color: @color8;
+}
+
+#cpu, #memory, #temperature {
+	margin: 5px 0px;
+}
+
+#cpu {
+	padding: 2px 5px 2px 8px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	margin-left: 3px;
+}
+
+#memory {
+	padding: 2px 11px 2px 7px;
+	border-radius: 0px;
+}
+
+#temperature {
+	padding: 2px 10px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	margin-right: 3px;
+}
+
+#battery {
+	padding: 0px 12px 0px 9px;
+}
+
+#battery.charging, #battery.plugged {
+    color: @color0;
+    background-color: @color4;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+#custom-power {
+	padding: 0px 7px 0px 11px;
+}

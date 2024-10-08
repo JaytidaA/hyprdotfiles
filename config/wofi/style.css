@@ -1,0 +1,53 @@
+@import url("/home/$USER/.cache/wal/colors-waybar.css");
+
+#window{
+	border-radius: 10px;
+	
+	background-color: @background;
+
+	font-family: "Fira Code Nerd", monospace;
+	font-size: 25px;
+}
+
+#outer-box{
+	background-color: none;
+}
+
+#input{
+	border: none;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+
+	color: @color10;
+	background-color: @color5;
+
+	font-style: italic;
+	font-weight: 600;
+	text-shadow: 1.5px 1.5px 1px @color2;
+}
+
+#inner-box{
+}
+
+entry{
+	padding: 0px 10px;
+}
+
+#entry:selected{
+	background-color: @color4;
+}
+
+#expander-box{
+	color: @color10;
+	background-color: @background;
+}
+
+#text{
+	color: @color12;
+}
+
+#text:selected{
+	color: #ffffff;
+}

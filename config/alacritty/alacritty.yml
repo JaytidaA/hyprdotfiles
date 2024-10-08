@@ -1,0 +1,15 @@
+# Alacritty Configuration File
+
+# Font configuration
+font:
+  normal:
+    family: "FiraCode Nerd Font"
+  size: 12
+
+# Cursor configuration
+cursor:
+  style: Beam
+
+# Include additional configuration
+import:
+  - ~/.cache/wal/colors-alacritty.yml
